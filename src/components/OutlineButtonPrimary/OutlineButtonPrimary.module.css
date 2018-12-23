@@ -1,0 +1,10 @@
+@value outlineButtonBorder, outlinePrimaryColorHover, primaryColor from '../../styles/theme.css';
+
+.button {
+  border: outlineButtonBorder;
+  color: primaryColor;
+}
+
+.button:hover {
+  background-color: outlinePrimaryColorHover;
+}

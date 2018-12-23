@@ -1,0 +1,10 @@
+@value primaryColor, primaryColorHover, white from '../../styles/theme.css';
+
+.button {
+  background-color: primaryColor;
+  color: white;
+}
+
+.button:hover {
+  background-color: primaryColorHover;
+}

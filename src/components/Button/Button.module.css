@@ -1,0 +1,42 @@
+@value primaryColor, defaultColor, defaultButtonBackground, defaultColorHover, buttonBoxShadow, white, disabledColor, disabledBackground, primaryColorHover from '../../styles/theme.css';
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  min-height: 2.25rem;
+  min-width: 5.5rem;
+  background-color: defaultButtonBackground;
+  color: defaultColor;
+  border: 0 none;
+  border-radius: 0.125rem;
+  box-shadow: buttonBoxShadow;
+  box-sizing: border-box;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  outline: white none 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.25s, 0.25s;
+  transition: background-color, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
+    cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:disabled {
+  color: disabledColor;
+  background-color: disabledBackground;
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.button:hover {
+  background-color: defaultColorHover;
+}

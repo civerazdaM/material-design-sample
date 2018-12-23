@@ -1,0 +1,10 @@
+@value secondaryColor, secondaryColorHover, white from '../../styles/theme.css';
+
+.button {
+  background-color: secondaryColor;
+  color: white;
+}
+
+.button:hover {
+  background-color: secondaryColorHover;
+}

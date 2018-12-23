@@ -1,0 +1,18 @@
+@value primaryColor: rgb(33, 150, 243);
+@value primaryColorHover: #1976d2;
+@value defaultColor: rgba(0, 0, 0, 0.87);
+@value defaultColorHover: #d5d5d5;
+@value outlineDefaultColorHover:  rgba(0, 0, 0, 0.08);
+@value outlinePrimaryColorHover: rgba(33, 150, 243, 0.08);
+@value outlineSecondaryColorHover: rgba(225, 0, 80, 0.08);
+@value defaultButtonBackground: #e0e0e0;
+@value secondaryColor: rgb(225, 0, 80);
+@value secondaryColorHover: rgb(157, 0, 56);
+@value buttonBoxShadow: rgba(0, 0, 0, 0.2) 0 1px 5px 0, rgba(0, 0, 0, 0.14) 0 2px 2px 0, rgba(0, 0, 0, 0.12) 0 3px 1px -2px;
+@value disabledColor: rgba(0, 0, 0, 0.26);
+@value disabledBackground: rgba(0, 0, 0, 0.12);
+@value white: rgb(255, 255, 255);
+@value fontFamily: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+@value defaultFontSize: 16px;
+@value outlineButtonBorder: 0.0625rem solid rgba(0, 0, 0, 0.23);
+@value defaultLabelColor: rgba(0, 0, 0, 0.54);

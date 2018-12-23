@@ -1,0 +1,16 @@
+@value outlineButtonBorder, outlineDefaultColorHover from '../../styles/theme.css';
+
+.button {
+  border: outlineButtonBorder;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.button:hover {
+  background-color: outlineDefaultColorHover;
+}
+
+.button:disabled {
+  background-color: transparent;
+}
