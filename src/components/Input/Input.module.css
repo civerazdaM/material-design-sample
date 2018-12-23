@@ -1,0 +1,105 @@
+@value primaryColor, defaultLabelColor, defaultColor from '../../styles/theme.css';
+
+.textFieldContainer {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  border: 0;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  padding: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 1.5rem) scale(1);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  transform-origin: top left;
+  padding: 0;
+  color: defaultLabelColor;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.floatingLabel {
+  transform: translate(0, 0.09375rem) scale(0.75);
+  transform-origin: top left;
+  color: primaryColor;
+}
+
+.labelError {
+  color: #f44336;
+}
+
+.disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+label + .inputContainer {
+  margin-top: 1rem;
+}
+
+.inputContainer {
+  display: inline-flex;
+  position: relative;
+  color: defaultColor;
+  font-size: 1rem;
+  line-height: 1.1875em;
+}
+
+.inputContainer:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: 'need text here to prevent subpixel zoom issue';
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  pointer-events: none;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.42);
+  color: transparent;
+}
+
+.inputContainer:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  transform: scaleX(0);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  border-bottom: 0.125rem solid primaryColor;
+  pointer-events: none;
+}
+
+.inputContainer:hover:not(.active):not(.hasError):not(.disabled):before {
+  border-bottom: 0.125rem solid defaultColor;
+}
+
+.active:after {
+  transform: scaleX(1);
+}
+
+.hasError:after {
+  transform: scaleX(1);
+  border-bottom-color: #f44336;
+}
+
+.input {
+  display: block;
+  flex-grow: 1;
+  min-width: 0;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0.375rem 0 0.4375rem;
+  border: 0;
+  font: inherit;
+  color: currentColor;
+  box-sizing: content-box;
+  background: none;
+}
+.error {
+  text-align: left;
+}
