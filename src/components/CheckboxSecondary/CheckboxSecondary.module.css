@@ -1,0 +1,6 @@
+@value secondaryColor from '../../styles/theme.css';
+
+.labelCheckedSecondary:before {
+  background-color: secondaryColor;
+  border: none;
+}

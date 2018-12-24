@@ -1,6 +1,7 @@
 @value primaryColor: rgb(33, 150, 243);
 @value primaryColorHover: #1976d2;
 @value defaultColor: rgba(0, 0, 0, 0.87);
+@value defaultBorderColor: rgba(0, 0, 0, 0.54);
 @value defaultColorHover: #d5d5d5;
 @value outlineDefaultColorHover:  rgba(0, 0, 0, 0.08);
 @value outlinePrimaryColorHover: rgba(33, 150, 243, 0.08);
