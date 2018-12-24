@@ -1,0 +1,8 @@
+@value primaryColor from '../../styles/theme.css';
+
+.labelCheckedPrimary:after {
+  background-color: primaryColor;
+}
+.labelCheckedPrimary:before {
+  border-color: primaryColor;
+}

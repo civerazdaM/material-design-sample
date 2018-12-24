@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FunctionComponent } from 'react';
-import styles from './Checkbox.module.css';
+import styles from './Radio.module.css';
 
 interface Props {
   name: string;
@@ -10,14 +10,14 @@ interface Props {
   disabled?: boolean;
   error?: string;
   autoFocus?: boolean;
-  classCheckboxContainer?: string;
+  classRadioContainer?: string;
   classInput?: string;
   classLabel?: string;
   classLabelChecked?: string;
   classLabelDisabled?: string;
 }
 
-const Checkbox: FunctionComponent<Props> = ({
+const Radio: FunctionComponent<Props> = ({
   name,
   value,
   label,
@@ -26,18 +26,18 @@ const Checkbox: FunctionComponent<Props> = ({
   checked = false,
   error = '',
   autoFocus = false,
-  classCheckboxContainer = '',
+  classRadioContainer = '',
   classInput = '',
   classLabel = '',
   classLabelChecked = '',
   classLabelDisabled = ''
 }) => {
   return (
-    <div className={`${styles.checkboxContainer} ${classCheckboxContainer}`}>
+    <div className={`${styles.radioContainer} ${classRadioContainer}`}>
       <input
         id={name}
         className={`${styles.input} ${classInput}`}
-        type="checkbox"
+        type="radio"
         name={name}
         value={value}
         checked={checked}
@@ -57,4 +57,4 @@ const Checkbox: FunctionComponent<Props> = ({
   );
 };
 
-export default Checkbox;
+export default Radio;

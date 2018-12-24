@@ -59,7 +59,6 @@
 .labelChecked.labelDisabled:before {
   background: disabledColor;
 }
-
 *,
 *:before,
 *:after {

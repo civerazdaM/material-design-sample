@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FunctionComponent } from 'react';
-import styles from './CheckboxSecondary.module.css';
-import Checkbox from '../Checkbox';
+import styles from './RadioPrimary.module.css';
+import Radio from '../Radio';
 
 interface Props {
   name: string;
@@ -13,7 +13,7 @@ interface Props {
   autoFocus?: boolean;
 }
 
-const CheckboxSecondary: FunctionComponent<Props> = ({
+const RadioPrimary: FunctionComponent<Props> = ({
   name,
   value,
   label,
@@ -24,7 +24,7 @@ const CheckboxSecondary: FunctionComponent<Props> = ({
   autoFocus = false
 }) => {
   return (
-    <Checkbox
+    <Radio
       checked={checked}
       autoFocus={autoFocus}
       error={error}
@@ -33,9 +33,9 @@ const CheckboxSecondary: FunctionComponent<Props> = ({
       label={label}
       name={name}
       value={value}
-      classLabelChecked={styles.labelCheckedSecondary}
+      classLabelChecked={styles.labelCheckedPrimary}
     />
   );
 };
 
-export default CheckboxSecondary;
+export default RadioPrimary;

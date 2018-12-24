@@ -1,12 +1,11 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Checkbox from './index';
 import { boolean, text } from '@storybook/addon-knobs/react';
+import RadioSecondary from './index';
 
-storiesOf('Checkbox', module).add('Checkbox', () => (
-  <Checkbox
+storiesOf('Radio Secondary', module).add('Radio Secondary', () => (
+  <RadioSecondary
     name="name"
     value={text('value', 'name')}
     label={text('label', 'Name')}

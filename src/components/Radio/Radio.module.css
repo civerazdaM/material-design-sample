@@ -1,0 +1,71 @@
+@value defaultBorderColor, defaultColor, disabledColor, white, black, blackRippleEffect from '../../styles/theme.css';
+@keyframes ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px black;
+  }
+  50% {
+    box-shadow: 0px 0px 0px 0.9375rem blackRippleEffect;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0.9375rem black;
+  }
+}
+.radioContainer {
+  margin: 1rem 0;
+}
+.radioContainer.radioContainer-inline {
+  display: inline-block;
+}
+.input {
+  display: none;
+}
+.label {
+  display: inline-block;
+  height: 1.25rem;
+  position: relative;
+  padding: 0 1.875rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+.label:before,
+.label:after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transition-property: transform, border-color;
+}
+.label:before {
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid defaultBorderColor;
+}
+.label:after {
+  top: 0.3125rem;
+  left: 0.3125rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  transform: scale(0);
+}
+.labelChecked:before {
+  border-color: disabledColor;
+  animation: ripple 0.2s linear forwards;
+}
+.labelChecked:after {
+  transform: scale(1);
+  background: defaultColor;
+}
+.labelDisabled:before {
+  border-color: disabledColor;
+}
+.labelChecked.labelDisabled:before {
+  background: disabledColor;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}

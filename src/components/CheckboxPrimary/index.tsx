@@ -10,21 +10,6 @@ interface Props {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
   error?: string;
-  autoComplete?:
-    | 'on'
-    | 'off'
-    | 'name'
-    | 'username'
-    | 'email'
-    | 'organization'
-    | 'street-address'
-    | 'country'
-    | 'postal-code'
-    | 'language'
-    | 'bday'
-    | 'sex'
-    | 'tel'
-    | 'url';
   autoFocus?: boolean;
 }
 
@@ -36,14 +21,12 @@ const CheckboxPrimary: FunctionComponent<Props> = ({
   disabled = false,
   checked = false,
   error = '',
-  autoComplete,
   autoFocus = false
 }) => {
   return (
     <Checkbox
       checked={checked}
       autoFocus={autoFocus}
-      autoComplete={autoComplete}
       error={error}
       disabled={disabled}
       onChange={onChange}

@@ -14,8 +14,6 @@ storiesOf('Checkbox Secondary', module).add('Checkbox Secondary', () => (
     onChange={action('you can not edit this field')}
     disabled={boolean('disabled', false)}
     error={text('error', '')}
-    // @ts-ignore
-    autoComplete={text('autoComplete', 'on')}
     autoFocus={boolean('autoFocus', false)}
   />
 ));
